@@ -10,4 +10,3 @@ The site offers such functionalities as:
 
 That's all for now.
 
-Translated with DeepL.com (free version)
