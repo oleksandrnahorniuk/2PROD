@@ -1,0 +1,927 @@
+.signup-main {
+  background-color: #141414;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.signup-container {
+
+    display: flex;
+    height: 90vh;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    /* border: 5px solid rgb(210, 210, 210); */
+}
+
+.signup-text{
+    margin-top: 10px;
+    text-align: left;
+}
+
+.signup-text h1{
+    user-select: none;
+    font-size: 3rem;
+    color: whitesmoke;
+}
+
+.signup-text h2{
+    user-select: none;
+   margin-top: 1rem;
+   color: whitesmoke;
+   text-decoration: none;
+}
+
+.signup-form input[type="text"], 
+.signup-form input[type="password"], 
+.signup-form input[type="email"], 
+.signup-form input[type="number"] {
+  width: 100%; 
+  padding: 12px 15px; 
+  font-size: 16px; 
+  border: 1px solid #303030; 
+  border-radius: 5px; 
+  background-color: #303030;
+  color: whitesmoke; 
+  transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+.signup-form input[type="text"]:focus, 
+.signup-form input[type="password"]:focus, 
+.signup-form input[type="email"]:focus {
+  border-color: #ccc; 
+  box-shadow: 0 0 10px rgba(255, 174, 174, 0.433); 
+  outline: none;
+}
+
+.signup-form {
+  max-width: 100%;
+  width: 400px; 
+  padding: 40px 50px;
+  margin: 20px auto; 
+  background-color: #242424; 
+  border-radius: 10px; 
+  box-sizing: border-box;
+}
+  
+
+
+.signup-input {
+   
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    
+    border: 1px solid #ccc;
+    
+    font-family: inherit;
+    font-size: 16px;
+  }
+  
+.signup-form_btn {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #131313;
+    cursor: pointer;
+    
+    font-family: inherit;
+    font-size: 16px;
+    color: #fff;
+  }
+
+.singuplink {
+  color: #ff0844;
+  transition: all 0.2s ease;
+}
+
+.singuplink:hover {
+  transition: all 0.2s ease;
+  color: whitesmoke;
+  text-decoration: none;
+}
+  
+.signup-form_btn:hover {
+    background-color: #ff1010;
+  }
+
+#loginForm {
+  display: none;
+}
+
+.login_img, .register_img{ 
+  width: 90px;
+  height: 100px;
+  padding-bottom: 10px;
+  opacity: 0.3;
+}
+
+#registerForm {
+  display: inline;
+}
+
+.error {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+
+#forgot h3 {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#forgot div {
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+  /* library */
+
+  .library__main{
+
+    /* background: #fff; */
+    background: #131313;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   
+    justify-content: flex-start;
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 100px;
+  }
+
+  .library__container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap; /* Позволяет переносить блоки на следующую строку, если не хватает места */
+    /* justify-content: flex-start;  */
+    justify-content: center;
+    gap: 1px; 
+    /* border: 1px solid red ; */
+  }
+
+
+
+
+.search__bar{
+  position: relative;
+  z-index: 1;
+  margin-top: 5rem;
+margin-bottom: 2rem;
+width: 50vw;
+/* border: 1px solid rgb(0, 255, 13) ; */
+}
+
+.search__bar input#search{
+    width: 100%;
+    height: 50px;
+    background: #262626;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #fff;
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+.search__bar button.icon{
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+   
+    border: none;
+    background: #232833;
+    height: 50px;
+    width: 50px;
+    color: #4f5b66;
+    opacity: 0;
+    font-size: 10pt;
+   
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+  }
+
+
+ 
+.search__bar:hover button.icon:hover{
+    background: white;
+  }
+
+
+.audio-block {
+    position: relative;
+    /* border: 1px solid #ccc; */
+    border: 1px solid #131313 ;
+    border-radius: 3px;
+    padding: 16px; margin: 16px;
+    width: 250px;
+    text-align: center;
+    background-color: #131313;
+    transition: all 0.1s ease;
+}
+
+.audio-block:hover{
+  border-radius: 5px;
+  background-color: #262626;
+  border: 1px solid #626262 ;
+  transition: all 0.1s ease;
+}
+
+
+.image-container{
+  position: relative;
+}
+
+.cover-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    position: relative;
+}
+
+.fa-play, .fa-pause {
+  color: rgba(255, 255, 255, 0.484); 
+  opacity: 0; 
+  position: absolute; 
+  top: 50%; left: 50%; 
+  transform: translate(-50%, -50%); 
+  font-size: 50px;
+  cursor: pointer;
+}
+
+
+
+.audio-block:hover .fa-play {
+  opacity: 1;
+
+}
+
+.fa-play:hover{
+  color: #ffffffa4;
+}
+
+.track-title {
+    font-size: 18px;
+    color: #fff;
+
+}
+
+.author {
+    font-size: 14px;
+    color: #a9a9a9;
+    margin: 10px 10px;
+    
+}
+
+/* .price {
+    font-size: 16px;
+    color: #333;
+    margin: 8px 0;
+} */
+
+.buy-button {
+    /* background-color: #007BFF; */
+    width: 100%;
+    color: #fff;  
+    background: #131313;
+
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: 1px solid #007BFF ;
+    cursor: pointer;
+    /* transition: background-color 0.3s; */
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.modal {
+
+  overflow: hidden;
+  display: none; 
+  position: fixed;
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7); 
+ 
+ 
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+
+
+.modal-content {
+  background-color: #131313;
+  margin: 10% auto;
+  padding: 20px;
+  position: relative;
+  width: 50%;
+  min-height: 40%;
+  border-radius: 8px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.button_wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin-top: 3rem; 
+}
+
+.button_wrapper p {
+  margin: 0; 
+}
+
+.buy_button {
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background: #007BFF;
+  cursor: pointer;
+  
+}
+
+.buy_button:hover{
+  background: #208cff;
+}
+
+
+.modal-content h2 {
+text-align: center;
+padding-top: 10px;
+}
+
+.license__block{
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1px;
+
+}
+
+.licence__description {
+  margin-top: 2rem;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #626262  ;
+  /* padding: 0 30px; */
+}
+
+
+.licence__description h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.licence__description p{
+  margin: 0;
+  color: #cdcdcd;
+  padding: 3px;
+  font-size: small;
+}
+
+
+.single__license{
+  cursor: pointer;
+    border: 1px solid #131313 ;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 0px;
+    width: 160px;
+    height: 100px;
+    justify-content: center;
+    flex: 1;
+    margin: 10px 8px;
+    background-color: #131313;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+.single__license p {
+  font-size: small;
+  margin-top: 8px;
+}
+
+.selected {
+  border: 1px solid #007BFF;
+  background-color: #1a1a1a; 
+}
+
+.single__license:hover{
+  background-color:#262626
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 2rem;
+
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* AUDIO PLAYER */
+
+.audio-player {
+  visibility: hidden;
+  height: 80px;
+  position: fixed;
+  bottom: 20px; 
+  left: 20px; 
+  right: 20px;
+  width: calc(100% - 40px); 
+  padding: 10px;
+  background: #22222293;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 15px; /* Скругляем углы */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+  box-sizing: border-box;
+}
+
+.audio-player input#volume-bar {
+  width: 8%; 
+  max-width: 100px;
+  min-width: 50px; 
+}
+
+.audio-player button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: large;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 10px; 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  width: 50px; 
+  height: 50px; 
+}
+
+/* Стили для иконки внутри кнопки */
+.audio-player button i.fa-play {
+  opacity: 1; 
+  position: static;
+  transform: none;
+  font-size: 28px; 
+  color: #fff; 
+}
+
+.audio-player button:hover {
+  color: #d4d4d4;
+}
+
+/* Стили для иконки паузы */
+.audio-player button i.fa-pause {
+  opacity: 1;
+  position: static;
+  transform: none;
+  font-size: 28px;
+  color: #fff;
+}
+
+.audio-player input[type="range"] {
+  /* width: 80%; */
+  flex-grow: 1;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#volume-container {
+  display: flex; 
+  align-items: center; 
+  position: relative;
+}
+
+#volume-bar {
+  display: none; 
+  width: 100px;
+  margin-left: 10px; 
+}
+
+#volume-container:hover #volume-bar {
+  display: block; 
+  transition: opacity 0.3s; 
+}
+
+#volume-container:hover #volume-icon {
+  opacity: 1; 
+  transition: opacity 0.3s;
+}
+
+#volume-icon {
+  font-size: 35px;
+  transition: opacity 0.3s; 
+}
+
+/* UPLOAD MENU */
+
+/* Блок с аватаркой и логином */
+
+
+
+.dashboard {
+  color: whitesmoke;
+  height: 100vh;
+  width: 80%;
+  background-color: #141414;
+  margin: 0 auto; /* Выравнивание по центру */
+}
+
+.dashboard__header {
+  background-color: #141414;
+  padding: 20px;
+  text-align: center;
+  gap: 25px; /* Расстояние между элементами */
+
+}
+
+#usernameDisplay {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.user-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #007bff00;
+  transition: all 0.2s ease;
+}
+
+.user-avatar:hover {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid #007BFF;
+}
+
+/* Контейнер для колонок */
+.dashboard__content {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.library_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.search__box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.library_bg_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+/* Левая колонка */
+.dashboard__left {
+  text-align: center;
+  flex: 1;
+  background-color: #242424;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 300px;
+  max-height: 400px;
+  overflow-y: auto; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.dashboard__left::-webkit-scrollbar {
+  width: 0; 
+  height: 0; 
+}
+
+.track-list {
+  list-style: none;
+  padding: 0;
+  padding-top: 15px;
+}
+
+/* .track-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #313131;
+} */
+
+/* Правая колонка */
+.dashboard__right {
+  flex: 1;
+  display: flex; 
+  flex-direction: column; 
+}
+
+.upload-container {
+  background-color: #242424;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 300px;
+  text-align: center;
+}
+
+/* Зона для перетаскивания */
+.drop-zone {
+  margin: 20px;
+  border: 2px dashed #007bff;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.drop-zone:hover {
+  background-color: #313131;
+}
+
+
+
+
+
+
+
+
+.track-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #242424;
+  max-height: 100px;
+}
+
+.track-item:hover{
+  background: #303030;
+}
+
+.track-thumbnail {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  margin-right: 15px; 
+  overflow: hidden; 
+  border-radius: 5px; 
+}
+
+.track-thumbnail img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.track-details {
+  margin-right: 15px; 
+  flex-grow: 1; 
+}
+
+
+
+.track-details h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #d6d6d6;
+}
+
+.track-info{
+  align-items: center;
+  margin-right: 15px; /* Добавляем отступ справа от картинки */
+}
+
+.track-details p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.track-actions {
+ 
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.track-actions .edit-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.track-actions .edit-button:hover {
+  background: #0056b3;
+}
+
+.sign_out_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border-radius: 4px;
+  background: #ff0844;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.sign_out_btn:hover{
+  transition: all 0.3s ease;
+  background: #0856ff;
+}
+
+.second_wrapper{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 960px) {
+
+  .search__bar{
+    width: 80%;
+  }
+
+  .modal-content{
+    width: 90%;
+    margin: 25% auto;
+  }
+
+  .dashboard__content{
+    display: block;
+    margin-bottom: 15px;
+    padding: 0;
+    padding-bottom: 25px;
+  }
+
+  .signup-main{
+    overflow: scroll;
+  }
+
+  .upload-container{
+    margin-top: 20px;
+  }
+
+    /* Основные стили для контейнера */
+    /* .signup-main {
+      padding: 20px 10px;
+    } */
+  
+    /* Контейнер для формы */
+    .signup-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center; 
+      height: 90vh;
+      width: 100%; 
+      max-width: 1300px; 
+      margin: 0 auto; 
+      padding: 0 50px;
+      z-index: 1;
+    }
+  
+    /* Текст заголовка */
+    .signup-text{
+      text-align: center;
+    }
+
+    .signup-text h1 {
+      font-size: 2.4rem; 
+    }
+  
+    .signup-text h2 {
+      font-size: 1.3rem; 
+    }
+  
+    /* Форма */
+    .signup-form {
+      width: 100%; 
+      padding: 20px 30px; 
+    }
+  
+    /* Поля ввода */
+    .signup-form input[type="text"],
+    .signup-form input[type="password"],
+    .signup-form input[type="email"],
+    .signup-form input[type="number"] {
+      font-size: 18px; 
+      padding: 10px 12px; 
+    }
+  
+    .signup-form_btn {
+      height: 50px;
+      padding: 10px 15px; 
+      font-size: 18px; 
+    }
+  
+    /* Стиль для полей ввода */
+    .signup-input {
+      font-size: 14px; 
+    }
+
+    .license__block h3{
+      font-size: 1rem;
+    }
+  }
+

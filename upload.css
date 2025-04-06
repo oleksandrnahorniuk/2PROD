@@ -1,0 +1,323 @@
+.upload-form input[type="text"], 
+.upload-form input[type="password"], 
+.upload-form input[type="email"], 
+.upload-form input[type="number"] {
+  width: 100%; 
+  padding: 12px 15px; 
+  font-size: 16px;
+  border: 1px solid #303030; 
+  border-radius: 5px; 
+  background-color: #303030; 
+  color: whitesmoke; 
+  transition: border-color 0.3s, box-shadow 0.3s; 
+  margin-bottom: 15px; 
+}
+
+.upload-form input[type="text"]:focus, 
+.upload-form input[type="password"]:focus, 
+.upload-form input[type="email"]:focus {
+  border-color: #ccc; 
+  box-shadow: 0 0 10px rgba(255, 174, 174, 0.433); 
+  outline: none; /* Убираем стандартный фокусный контур */
+}
+
+
+
+.modal-content-upload {
+    background-color: #131313;
+    margin: 10% auto;
+    position: relative;
+    /* width: 50%; 
+    max-width: 800px; */
+    width: 70%; 
+    max-width: 900px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 40px;
+  }
+
+.previewAudio{
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.upload-form {
+    /* padding: 30px; */
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.form-group {
+  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  
+  
+  .img-preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%; /* Занимает половину модального окна */
+    /* height: 50%; */
+    margin: 20px auto;
+  }
+  
+  
+  .img-preview {
+    cursor: pointer;
+    width: 300px; 
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #303030;
+    color: #aaa;
+    border: 1px dashed #555;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    transition: background-color 0.3s;
+    max-width: 100%; 
+    max-height: 100%; 
+  }
+  
+  .img-upload-label {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  .img-preview img {
+    max-width: 100%; 
+    max-height: 100%; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  .img-preview:hover {
+    background-color: #424242; 
+  }
+  
+  .img-upload {
+    display: block; 
+    width: 100%; 
+    padding: 12px 15px; 
+    font-size: 16px;
+    color: whitesmoke; 
+    background-color: #242424; 
+    border: 1px solid #303030;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: border-color 0.3s, background-color 0.3s; 
+    margin-bottom: 15px;
+  }
+  
+  .input-fields p {
+    margin: 0; 
+    font-size: 17px; 
+    color: rgb(207, 207, 207); 
+    text-align: left; 
+    padding-bottom: 10px;
+  }
+  
+  .upload-form .upload_track_btn {
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background: #007BFF;
+    cursor: pointer;
+  }
+  
+  .upload-form .upload_track_btn:hover {
+    background: #2990ff;
+  }
+
+
+  .price-group {
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px; 
+    width: 100%;
+}
+
+.price-group input[type="number"] {
+    flex: 1; 
+    padding: 12px 15px; 
+    padding-left: 20px;
+    font-size: 16px; 
+    border: 1px solid #303030; 
+    border-radius: 5px;
+    background-color: #303030; 
+    color: whitesmoke; 
+    transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+.price-group input[type="number"]:focus {
+    border-color: #ccc;
+    box-shadow: 0 0 10px rgba(255, 174, 174, 0.433);
+    outline: none;
+}
+
+
+  
+  .upload__main {
+    background-color: #141414;
+    width: 100%;
+  }
+
+.input-fields{
+  padding: 0px 40px;
+
+  width: 50%;
+}
+
+.analytics{
+    display: flex;
+    margin-top: 20px;
+    background-color: #242424;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-grow: 1; 
+}
+
+.analytics-content{
+
+  display: flex; 
+  gap: 20px; 
+  align-items: center;
+}
+
+.analytics-content h3 {
+  margin: 0; 
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon i {
+  position: absolute;
+  left: 10px; 
+  font-size: 16px;
+  color: #aaa;
+  line-height: 1; 
+  
+  transform: translateY(-50%); 
+}
+
+.edit-icon {
+
+  color: #ffffff;
+  cursor: pointer;
+
+}
+
+.delete-icon{
+  color: #ff0a0a;
+  cursor: pointer;
+}
+
+.edit-icon:hover {
+  color: #d0d0d0;
+}
+
+.delete-icon:hover {
+  color: #ff7878;
+}
+
+.edit-icon, .delete-icon {
+  margin-right: 8px;  
+}
+
+.toggle-content {
+  display: none;
+  padding-left: 10px;
+  background-color: #131313;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap; 
+}
+.toggle-btn, .toggle-btn-mp3, .toggle-btn-wav, .toggle-btn-exc{
+  background-color: #131313;
+  color: white;
+  text-decoration: none;
+  border: none;    
+  outline: none;   
+  cursor: pointer;
+}
+
+
+input[type="range"] {
+  width: 120px; 
+
+}
+
+.toggle-content-element-mp3, .toggle-content-element-wav, .toggle-content-element-exc{
+  display: flex;
+  flex-direction: row; 
+  display: none; 
+}
+
+.avatar-block {
+  position: relative; 
+  display: inline-block; 
+}
+
+.fa-pencil {
+  position: absolute;
+  cursor: pointer;
+
+  padding: 8px;
+  border-radius: 15px;
+  top: 80%; 
+  left: 95%;
+  transform: translate(-50%, -50%);
+  color: #f0f0f0;
+}
+
+.fa-pencil:hover{
+  color: #b5b5b5;
+}
+
+
+@media screen and (max-width: 960px) {
+
+  .modal-content-upload{
+    width: 90%;
+  }
+
+  .form-group{
+    display: block;
+  }
+
+  .input-fields{
+    width: 90%;
+    display: contents;
+  }
+
+  .analytics-content h2, .analytics-content h3 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+.img-preview-container{
+  margin: 0px auto;
+}
+
+}

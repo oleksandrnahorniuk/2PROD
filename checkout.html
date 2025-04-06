@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles2.css">
+<link rel="stylesheet" href="checkout.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style></style>
+</head>
+<body>
+<div class="signup-main">
+<!-- Навигация -->
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">2PROD</a>
+        <p>Studio</p>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="/index.html" class="navbar__links">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="/library.html" class="navbar__links">Library</a>
+            </li>
+            <li class="navbar__btn">
+                <a href="/" id="signout" class="sign_out_btn">Sign Out</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="checkout__main">
+    <div class="checkout__left">
+        <div class="checkout__element">
+            <div class="element__content">
+                <div class="element__icon">
+                    <img class="element__image" src="/" alt="Track Icon">
+                </div>
+                <div class="element__data">
+                    <h2 class="element__name">Track Name</h2>
+                    <h2 class="element__license__name">MP3</h2>
+                </div>
+            </div>
+            <div class="element__price">
+                <span class="element__price__data">0</span>
+            </div>
+            <i id="agreereading" class="fa fa-file-text-o" aria-hidden="true" title="Read the agreement"></i>
+        </div>
+    </div>
+
+    <div class="checkout__right" id="checkout__right">
+        <div class="cart-summary">
+            <h2>Cart Summary</h2>
+        </div>
+        <div class="total-price">
+            <span class="total-price-span">Total: $0.00</span>
+        </div>
+        <div class="payment-method" id="payment_method">
+            <!-- <div class="user-data__block" style="height: 200px;">
+                <h3>User data:</h3>
+                <input class="checkout-input" id="" type="text" placeholder="Full Name">
+                <input class="checkout-input" id="" type="email" placeholder="E-mail">
+            </div> -->
+            <div class="payment-method__block" id="payment-method__block" style="height: 200px;">
+                <div id="paypal-button-container"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="checkout__modal" id="contractModal">
+        <div class="checkout__modal-content">
+            <div class="checkout__modal-header">
+                <h2>Contract</h2>
+                <button class="checkout__modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="checkout__modal-body">
+
+                <div class="checkout__agreement-head">
+                <p>Date: <span id="currentDate"></span></p>
+                <p>Buyer: <input id="buyerFullName" type="text" placeholder="Full Name">, Email: <input id="buyerEmail" type="email" placeholder="E-mail"></p>
+                <p>Artist: <span id="artistName"></span></p>
+                </div>
+                
+                <div class="checkout__agreement">
+                <h3>Music License Agreement</h3>
+                <p>This Music License Agreement (the "Agreement") is made and entered into by and between the Buyer (the "Licensee") and the Artist (the "Licensor"), collectively referred to as the "Parties". By purchasing or using the music, the Licensee agrees to the following terms and conditions:</p>
+                <ol>
+                    <li><strong>Grant of License</strong>: The Licensor grants the Licensee a non-exclusive, non-transferable license to use the music track (the "Track") for the purposes outlined in this Agreement. The usage of the Track is subject to the following limitations:
+                        <ul>
+                            <li><strong>Maximum Streams</strong>: The Licensee is permitted to stream the Track up to <span id="maxStreams"></span> times.</li>
+                            <li><strong>Maximum Copies</strong>: The Licensee may distribute up to <span id="maxCopies"></span> copies of the Track.</li>
+                            <li><strong>Commercial Use</strong>: The Licensee is granted <span id="commericalUse"></span> rights for commercial use of the Track, as per the terms outlined in this Agreement.</li>
+                            <li><strong>License Type</strong>: The Licensee is granted the license in the <span id="licenseType"></span> format, as per the terms outlined in this Agreement.</li>
+                        </ul>
+                    </li>
+                    <li id="ownership-rights"><strong>Ownership Rights</strong>: The Licensor retains full ownership and copyright to the original music track. The Licensee is granted only the rights to use the Track as specified in this Agreement.</li>
+                    <li><strong>Unauthorized Use</strong>: Any use of the Track beyond the agreed limitations, including but not limited to exceeding the specified number of streams, copies, or unauthorized commercial exploitation, will be considered a breach of contract and may result in legal action.</li>
+                    <li><strong>Termination of License</strong>: The Licensor reserves the right to terminate this Agreement if the Licensee fails to comply with any of the terms set forth. Upon termination, the Licensee must immediately cease all use of the Track and remove any copies from circulation.</li>
+                </ol>
+                <p>By accepting this Agreement, the Licensee acknowledges and agrees to abide by the terms and conditions set forth herein.</p>
+                </div>
+                <h3>Signatures:</h3>
+                <p>Buyer: <input id="buyerSignature" type="text"></p>
+                <p>Artist: <span id="artistSingature"></span></p>
+            </div>
+            <div class="checkout__modal-footer">
+                <button id="agreeButton">Agree</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script type="module" src="/javascript/checkout.js"></script>
+<script type="module" src="/javascript/firebase.js"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AXJrITRNSUWdBlOYNXIKc8Mumbj2x9E-pAAv0D-1f2wmVKaRh81UoYhotYGa-ukpEUoUppYi1vImHo_T"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip/dist/jszip.min.js"></script>
+</body>
+</html>

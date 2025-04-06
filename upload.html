@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles2.css">
+<link rel="stylesheet" href="upload.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style></style>
+</head>
+<body>
+<div class="signup-main">
+<!-- Навигация -->
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">2PROD</a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="./index.html" class="navbar__links">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="./library.html" class="navbar__links">Library</a>
+            </li>
+            <li class="navbar__btn">
+                <a href="/" id="signout" class="sign_out_btn">Sign Out</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="upload__main">
+<div class="dashboard">
+
+    <!-- Блок с аватаркой и логином -->
+    <div class="dashboard__header">
+        <div class="avatar-block">
+        <i class="fa fa-pencil" id="profile_edit_btn" aria-hidden="true" style="font-size: 25px;"></i>
+        <img src="./covers/3400abee285a9cb56636f3ec05a90cdf.jpg" alt="User Avatar" class="user-avatar">
+        </div>
+        <h1 id="usernameDisplay">Username</h1>
+    </div>
+
+    <!-- Контейнер для колонок -->
+    <div class="dashboard__content">
+
+        <!-- Левая колонка: список треков -->
+        <div class="dashboard__left">
+            <h2>Your Tracks</h2>
+            <ul id="trackList" class="track-list">
+                <li>No tracks uploaded yet.</li>
+            </ul>
+        </div>
+
+        <!-- Правая колонка: загрузка треков -->
+        <div class="dashboard__right">
+            
+            <div class="upload-container">
+                <h2>Upload new track!</h2>
+                <div id="drop-zone" class="drop-zone">
+                    <p>Drag and drop your track file (MP3/WAV) here or click to upload</p>
+                    <input type="file" id="trackInput" accept="audio/*, .mp3" hidden>
+                </div>
+            </div>
+
+            <div class="analytics">
+                <div class="analytics-content">
+                    <h2>Quick Analytics:</h2>
+                    
+                    <!-- <h3>43 Listeners</h3> -->
+                    <h3>1.2M Plays</h3>
+                    <h3>10K Total Sales</h3>
+                  
+
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+</div>
+
+
+
+
+<!-- Модальное окно для загрузки -->
+<div id="uploadModal" class="modal">
+    <div class="modal-content-upload">
+        <div class="modal-top">
+        <span class="close-button" id="closeModal">&times;</span>
+        <h2 >Track Information</h2></div>
+        <form id="uploadForm" class="upload-form">
+            <div class="form-group">
+                <div class="img-preview-container">
+                    <label for="trackImage" class="img-upload-label">
+                        <div class="img-preview" id="imgPreview">
+                            <span>Upload Cover</span>
+                        </div>
+                    </label>
+                    <input type="file" class="img-upload" id="trackImage" accept="image/*" required style="display: none;" />
+                </div>
+                <div class="input-fields">
+                    <p>Name</p>
+                    <input type="text" id="trackName" placeholder="Track Name" required />
+
+
+                    <p>Price</p>
+                    <div class="price-group">
+                        <div class="input-with-icon">
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                            <input type="number" id="trackPrice" placeholder="MP3" title="Price for the MP3 version of track."  required />
+                         </div>
+                        <div class="input-with-icon">
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                            <input type="number" id="trackPrice2" placeholder="WAV" title="Price for the MP3/WAV version of track."  required />
+                        </div>
+                        <div class="input-with-icon">
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                            <input type="number" id="trackPrice3" placeholder="EXC" title="Price for the EXCLUSIVE version of track."  required />
+                        </div>
+                    </div>
+
+
+
+                    <p title="You should use MP3/WAV file with your voice tag.">Audio Preview</p>
+                    <input type="file" class="previewAudio" id="previewAudio" accept="audio/mp3" required />
+
+                    <p>License Terms<button class="toggle-btn"> ▼ </button></p>
+
+  
+                    <div class="toggle-content">
+                        <p>MP3<button class="toggle-btn-mp3"> ▼ </button></p>
+                        <div class="toggle-content-element-mp3">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+
+                            <p>Max. Copies:</p>
+                            <input id="pi_input" type="range" min="0" max="1000000" step="10000" value="50000" />
+                            <output id="value" style="margin-left: 10px;">0</output>
+
+                          </div>
+                          <div style="display: flex; flex-direction: column; align-items: center;">
+
+                            <p>Max. Streams:</p>
+                            <input id="pi_input1" type="range" min="0" max="1000000" step="10000" value="200000" />
+                            <output id="value1" style="margin-left: 10px;">0</output>
+                            
+                          </div>
+                          <div style="display: flex; align-items: center; margin-top: 10px;">
+                                <p>Commercial Use:</p>
+                                <input id="commercialUseToggle" type="checkbox" />
+                          </div>
+                        </div>
+                    
+
+                    <p>WAV<button class="toggle-btn-wav"> ▼ </button></p>
+                    <div class="toggle-content-element-wav">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <p>Max. Copies:</p>
+                        <input id="pi_input2" type="range" min="0" max="1000000" step="10000" value="50000" />
+                        <output id="value2" style="margin-left: 10px;">50000</output>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <p>Max. Streams:</p>
+                        <input id="pi_input3" type="range" min="0" max="1000000" step="10000" value="200000" />
+                        <output id="value3" style="margin-left: 10px;">200000</output>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-top: 10px;">
+                        <p>Commercial Use:</p>
+                        <input id="commercialUseToggle2" type="checkbox" />
+                    </div>
+                </div>
+
+                   
+            
+            </div>
+                    
+                    
+
+                    <button class="upload_track_btn" type="submit">Upload Track</button>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+</div>
+<script src="./javascript/app.js"></script>
+<script type="module" src="./javascript/img_preview.js"></script>
+<script type="module" src="./javascript/audioplayer.js"></script>
+<script type="module" src="./javascript/firebase.js"></script>
+<script type="module" src="./javascript/auth.js"></script>
+<script type="module" src="./javascript/upload.js"></script>
+
+</body>
+</html>

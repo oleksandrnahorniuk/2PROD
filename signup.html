@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles2.css"/>
+</head>
+<body>
+    <div class="signup-main">
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">2PROD</a>
+            <div class="navbar__toogle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="./index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="./library.html" class="navbar__links">Library</a>
+                </li>
+             
+            </ul>
+        </div>
+    </nav>
+
+    <div class="signup-container">
+        <div class="signup-text" id="tologin">
+            <h1>Register you account</h1>
+            <h2>Already have an account? <a href="" class="singuplink" onclick="">Sign Up</a></h2>
+        </div> 
+
+        <div class="signup-text" id="toregister" style="display: none;">
+            <h1>Welcome back!</h1>
+            <h2>Don't have an account? <a href="" class="singuplink" onclick="">Register</a></h2>
+        </div> 
+    
+
+        <form class="signup-form" id="registerForm" method="post">
+            <!-- <img class="login_img" src="/images/login-128.png"> -->
+            <input id="registerUsername" name="username" class="signup-input" type="text" placeholder="Username">
+            <input class="signup-input" id="email" type="email" placeholder="E-mail">
+            <input id="registerPassword" name="password" class="signup-input" type="password" placeholder="Password">
+            <input id="repeatregisterPassword" class="signup-input" type="password" placeholder="Repeat password">
+            <button class="signup-form_btn" onclick="" id="submitrg" type="submit">Register</button>
+
+        </form>
+
+        <form class="signup-form" id="loginForm" method="post">
+            <!-- <img class="register_img" src="/images/add-user-128.png"> -->
+            <!-- <input id="loginUsername" name="username" class="signup-input" type="text" placeholder="Username"> -->
+            <input class="signup-input" id="loginEmail" type="email" placeholder="E-mail">
+            <input id="loginPassword" name="password" class="signup-input" type="password" placeholder="Password">
+            <button class="signup-form_btn" onclick="" id="submitsn" type="submit">Login</button>
+
+        </form>
+
+
+    </div>
+    </div>
+<script type="module" src="./javascript/firebase.js"></script>
+<script type="module" src="./javascript/auth.js"></script>
+
+</body>
+</html>

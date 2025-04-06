@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Library</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles2.css"/>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">2PROD</a>
+            <div class="navbar__toogle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="./index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="./library.html" class="navbar__links">Library</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="./upload.html" class="navbar__links">Account</a>
+                </li>
+             
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="library__main">
+        <div class="search__box">
+            <div class="search__bar">
+                <input type="search" id="search" placeholder="Search..." />
+                <button class="icon"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        <div class="library_bg">
+            <img class="library_bg_img" src="images/jonatan-pie-3l3RwQdHRHg-unsplash.jpg">
+        </div>
+   
+
+    
+        <div class="library__container">
+
+        </div>
+    </div>
+
+    <div class="modal" id="licenseModal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <h2>Choose License</h2>
+            <div class="license__block">
+                <div class="single__license" id="mp3Lease" data-price="15" data-copies="1,000" data-streams="1,000" data-profit="Non-profit">
+                    <h3>MP3 Lease</h3>
+                    <p>$15</p>
+                    <h6>MP3</h6>
+                </div>
+                <div class="single__license" id="wavLease" data-price="30" data-copies="2,000" data-streams="2,000" data-profit="Profit">
+                    <h3>WAV Lease</h3>
+                    <p>$30</p>
+                    <h6>MP3, WAV</h6>
+                </div>
+                <div class="single__license" id="exclusive" data-price="160" data-copies="10,000" data-streams="10,000" data-profit="Profit">
+                    <h3>Exclusive</h3>
+                    <p>$160</p>
+                    <h6>MP3, WAV</h6>
+                </div>
+            </div>
+            <div class="licence__description">
+                <div class="description__texts">
+                    <h2>Usage Terms</h2>
+                    <p id="termCopies">Distribute up to 1,000 copies</p>
+                    <p id="termStreams">1,000 Online Audio Streams</p>
+                    <p id="termProfit">Non-profit Live Performances</p>
+                </div>
+            </div>
+            <div class="button_wrapper">
+                <p id="total">Total: $0</p>
+                <button class="buy_button" id="buy_button">Buy now</button>
+              </div>
+        </div>
+    </div>
+
+    <div class="audio-player" id="audio-player">
+        <audio id="audio" src=""></audio>
+        <button id="play-pause">
+            <i class="fa fa-play"></i>
+          </button>
+          <div id="volume-container">
+            <i class="fa fa-volume-up" id="volume-icon"></i>
+            <input type="range" id="volume-bar" min="0" max="1" step="0.01" value="1">
+          </div>
+        <input id="seek-bar" type="range" value="0">
+     
+      </div>
+
+
+<script type="module" src="./javascript/library.js" defer></script>
+<script type="module" src="./javascript/audioplayer.js"></script>
+<!-- <script src="library_modal.js"></script> -->
+<script type="module" src="./javascript/firebase.js"></script>
+<script src="./javascript/app.js"></script>
+</body>
+</html>
