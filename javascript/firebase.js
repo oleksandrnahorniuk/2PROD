@@ -5,13 +5,13 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCv4LjQw9lXo5-WwBK6d6_UFwwx4m9Cc6k",
+  apiKey: "apikey",
   authDomain: "database1-70eb6.firebaseapp.com",
-  databaseURL: "https://database1-70eb6-default-rtdb.europe-west1.firebasedatabase.app",
+  databaseURL: "databaseURL",
   projectId: "database1-70eb6",
-  storageBucket: "database1-70eb6.firebasestorage.app", // Без изменений
-  messagingSenderId: "189652369598",
-  appId: "1:189652369598:web:2fb028fd96327d5d47deef"
+  storageBucket: "database1-70eb6.firebasestorage.app", 
+  messagingSenderId: "messagingSenderId",
+  appId: "appId"
 };
 
 const app = initializeApp(firebaseConfig);
